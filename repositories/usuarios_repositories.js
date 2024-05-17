@@ -21,7 +21,7 @@ class UsuarioRepository {
     }
 
     async delete(id) {
-        const usuario = await this.Usuarios.findById(id);
+        const usuario = await this.findById(id);
         if (!usuario) {
             throw new Error('Usuário não encontrado');
         }
