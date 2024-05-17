@@ -11,6 +11,7 @@ class UsuarioAplication {
     async findById(id) {
         return await this.usuarioRepository.findById(id);
     }
+  
 
     async create(usuarios) {
         return await this.usuarioRepository.create(usuarios);
