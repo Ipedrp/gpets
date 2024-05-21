@@ -13,8 +13,8 @@ class ContatoUsuarioRepository {
         return await Contatos_usuarios.create(contatos_usuarios);
     }
 
-    async update(id, contatoUsuario) {
-        await Contatos_usuarios.update(contatoUsuario, {
+    async update(id, contatos_usuarios) {
+        await Contatos_usuarios.update(contatos_usuarios, {
             where: { id_contato_usuario : id }
         });
         return await this.findById(id);
