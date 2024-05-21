@@ -1,20 +1,20 @@
 const { Contatos_pessoas_emergencias } = require('../data/dbContext');
 
-class ContatoPessoaEmergenciaRepository {
+class contatoPessoaEmergenciaRepository {
     async findAll() {
         return await Contatos_pessoas_emergencias.findAll();
     }
 
     async findById(id) {
-        return await ContatoPessoaEmergencia.findByPk(id);
+        return await Contatos_pessoas_emergencias.findByPk(id);
     }
 
-    async create(contatoPessoaEmergencia) {
-        return await Contatos_pessoas_emergencias.create(contatoPessoaEmergencia);
+    async create(contatos_pessoas_emergencias) {
+        return await Contatos_pessoas_emergencias.create(contatos_pessoas_emergencias);
     }
 
-    async update(id, contatoPessoaEmergencia) {
-        await Contatos_pessoas_emergencias.update(contatoPessoaEmergencia, {
+    async update(id, contatos_pessoas_emergencias) {
+        await Contatos_pessoas_emergencias.update(contatos_pessoas_emergencias, {
             where: {id_contato_pessoa_emergencia : id }
         });
         return await this.findById(id);
@@ -30,4 +30,4 @@ class ContatoPessoaEmergenciaRepository {
     }
 }
 
-module.exports = ContatoPessoaEmergenciaRepository;
+module.exports = contatoPessoaEmergenciaRepository;
