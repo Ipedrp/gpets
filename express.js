@@ -9,7 +9,14 @@ const usuarioRepository = new UsuarioRepository();
 const usuarioAplication = new UsuarioRepository(usuarioRepository);
 const usuarioFacede = new UsuarioAplication(usuarioAplication);
 
+//criando metodos da tabela areaSegura
+const AreaSeguraRepository = require('./repositories/areas_seguras_repositories');
+const AreaSeguraAplication = require('./aplication/areas_seguras_aplication');
+const AreaSeguraFacede = require('./facede/area_segura_facede');
 
+const areaSeguraRepository = new AreaSeguraRepository();
+const areaSeguraAplication = new AreaSeguraRepository(areaSeguraRepository);
+const areaSeguraFacede = new AreaSeguraAplication(areaSeguraAplication);
 
 const app = express();
 const port = 3000;
@@ -46,6 +53,42 @@ app.delete('/api/usuario/:id', async (req, res) => {
     let id = req.params.id;
     await usuarioFacede.delete(id);
     res.status(200).json({status: "Usuario deletado!"})
+})
+
+//criando rota post areaSegura
+app.post('/api/areaSegura', async (req, res) =>{
+    let areas_seguras = req.body
+    await areaSeguraFacede.create(areas_seguras);
+    res.json(areas_seguras);
+})
+
+//criando rota get areaSegura
+app.get('/api/areaSegura', async (req, res) => {
+    let areas_seguras = await areaSeguraFacede.findAll();
+    res.json(areas_seguras);
+})
+
+//criando rota get areaSegura
+app.get('/api/areaSegura/:id', async (req, res) => {
+    let id = req.params.id;
+    let areas_seguras = await areaSeguraFacede.findById(id);
+    res.json(areas_seguras);
+})
+
+//criando rota put areaSegura
+app.put('/api/areaSegura/:id', async (req, res) => {
+    let id = req.params.id;
+    let area_seguraBody = req.body;
+    console.log(area_seguraBody);
+    let areas_seguras = await areaSeguraFacede.update(id, area_seguraBody);
+    res.json(areas_seguras);
+})
+
+//criando rota delete areaSegura
+app.delete('/api/areaSegura/:id', async (req, res) => {
+    let id = req.params.id;
+    await areaSeguraFacede.delete(id);
+    res.status(200).json({status: "Area segura deletada!"})
 })
 
 // app.put('/api/usuario/:id', async (req, res) => {
