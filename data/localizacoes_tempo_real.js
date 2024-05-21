@@ -1,4 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
+const moment = require('moment-timezone');
     const Localizacoes_tempo_real = sequelize.define(
         "localizacoes_tempo_real",
         {
@@ -17,14 +18,16 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
-            data:{
+            data: {
                 type: DataTypes.DATE,
-                allowNull: false,
+                allowNull: true,
+                defaultValue: () => moment.tz('America/Sao_Paulo').format('YYYY-MM-DD HH:mm:ss')
             },
-            horario:{
-                type: DataTypes.TIME,
-                allowNull: false,
-            },
+            
+            // // horario:{
+            // //     type: DataTypes.TIME,
+            // //     allowNull: false,
+            // // },
             fk_pet:{
                 type: DataTypes.INTEGER,
                 allowNull: false,

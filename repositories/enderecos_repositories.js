@@ -8,6 +8,14 @@ class EnderecoRepository {
     async findById(id) {
         return await Enderecos.findByPk(id);
     }
+    async findAllByIdUser(id) {
+        let enderecos = await Enderecos.findAll({
+            where: {
+                fk_usuario: id
+            }
+        });
+        return enderecos;
+    }
 
     async create(endereco) {
         return await Enderecos.create(endereco);
@@ -15,7 +23,7 @@ class EnderecoRepository {
 
     async update(id, endereco) {
         await Enderecos.update(endereco, {
-            where: { id_endereco : id }
+            where: { id_endereco: id }
         });
         return await this.findById(id);
     }
