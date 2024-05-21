@@ -6,7 +6,7 @@ class ContatoPessoaEmergenciaRepository {
     }
 
     async findById(id) {
-        return await ContatoPessoaEmergencia.findByPk(id);
+        return await Contatos_pessoas_emergencias.findByPk(id);
     }
 
     async create(contatoPessoaEmergencia) {

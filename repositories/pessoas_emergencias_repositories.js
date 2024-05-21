@@ -9,12 +9,12 @@ class PessoaEmergenciaRepository {
         return await Pessoas_Emergencias.findByPk(id);
     }
 
-    async create(pessoaEmergencia) {
-        return await Pessoas_Emergencias.create(pessoaEmergencia);
+    async create(pessoas_emergencias) {
+        return await Pessoas_Emergencias.create(pessoas_emergencias);
     }
 
-    async update(id, pessoaEmergencia) {
-        await Pessoas_Emergencias.update(pessoaEmergencia, {
+    async update(id, pessoas_emergencias) {
+        await Pessoas_Emergencias.update(pessoas_emergencias, {
             where: { id_pessoa_emergencia : id }
         });
         return await this.findById(id);
