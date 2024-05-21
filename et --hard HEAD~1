@@ -1,0 +1,41 @@
+[33mcommit cd964aa3420f2fadb4756b499a5aca3d4d856e4e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/Victor[m[33m)[m
+Author: olvvikitor <victoroliveira.3002@gmail.com>
+Date:   Mon May 20 23:42:07 2024 -0300
+
+    adicionado crud de localização em tempo real
+
+[33mcommit f619633ae04b014186ec1dd72a83c6850e8f21d8[m
+Author: olvvikitor <victoroliveira.3002@gmail.com>
+Date:   Fri May 17 03:01:17 2024 -0300
+
+    remove node_modules
+
+[33mcommit 5454a604e26c8b8ccb04b7b58ad89c04fac81d86[m
+Author: olvvikitor <victoroliveira.3002@gmail.com>
+Date:   Fri May 17 02:46:53 2024 -0300
+
+    Criação das camadas: Repository/application/facede dos endereços
+
+[33mcommit 3412e8303cc62014b5f68a02764ef32869e0904e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Pedro Paulo <pedropaulo727mqs@gmail.com>
+Date:   Thu May 16 23:56:28 2024 -0300
+
+    testando rotas usuario
+
+[33mcommit aaa15c6e7b9cab2c7d45e092723c8e7dbf0a5d0b[m
+Author: Pedro Paulo <pedropaulo727mqs@gmail.com>
+Date:   Wed May 15 15:01:18 2024 -0300
+
+    express
+
+[33mcommit f6a1b3d0b50916d2c8523d73c23b2ec8b9e1ac7c[m
+Author: Pedro Paulo <pedropaulo727mqs@gmail.com>
+Date:   Thu May 9 21:25:03 2024 -0300
+
+    segundo commit
+
+[33mcommit 3b2bc4e13d552a1afb753716424da7bfd4e3eebc[m
+Author: Pedro Paulo <pedropaulo727mqs@gmail.com>
+Date:   Thu May 9 17:43:34 2024 -0300
+
+    primeiro commit
