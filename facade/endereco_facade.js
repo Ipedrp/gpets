@@ -1,19 +1,20 @@
 class EnderecoFacede {
+  
   constructor(enderecoAplication) {
     this.enderecoAplication = enderecoAplication;
   }
   async findAll() {
-    return await enderecoAplication.findAll();
+    return await this.enderecoAplication.findAll();
   }
 
   async findById(id) {
-    return await enderecoAplication.findById(id);
+    return await this.enderecoAplication.findById(id);
   }
   async findAllByIdUser(id) {
-    return await enderecoAplication.findAllByIdUser(id);
+    return await this.enderecoAplication.findAllByIdUser(id);
   }
   async create(endereco) {
-    return await enderecoAplication.create(endereco);
+    return await this.enderecoAplication.create(endereco);
   }
 
   async update(id, endereco) {
