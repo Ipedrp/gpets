@@ -4,15 +4,15 @@ class UsuarioFacede {
         this.usuarioAplication = usuarioAplication;
     }
     async findAll() {
-        return await usuarioAplication.findAll();
+        return await this.usuarioAplication.findAll();
     }
 
     async findById(id) {
-        return await usuarioAplication.findById(id);
+        return await this.usuarioAplication.findById(id);
     }
 
     async create(usuarios) {
-        return await usuarioAplication.create(usuarios);
+        return await this.usuarioAplication.create(usuarios);
     }
 
     async update(id, usuario) {
