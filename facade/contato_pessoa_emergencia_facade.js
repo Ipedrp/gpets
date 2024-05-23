@@ -4,15 +4,15 @@ class ContatoPessoaEmergenciaFacede {
         this.contatoPessoaEmergenciaAplication = contatoPessoaEmergenciaAplication;
     }
     async findAll() {
-        return await contatoPessoaEmergenciaAplication.findAll();
+        return await this.contatoPessoaEmergenciaAplication.findAll();
     }
 
     async findById(id) {
-        return await contatoPessoaEmergenciaAplication.findById(id);
+        return await this.contatoPessoaEmergenciaAplication.findById(id);
     }
 
     async create(Contatos_pessoas_emergencias) {
-        return await contatoPessoaEmergenciaAplication.create(Contatos_pessoas_emergencias);
+        return await this.contatoPessoaEmergenciaAplication.create(Contatos_pessoas_emergencias);
     }
 
     async update(id, contatoPessoaEmergencia) {

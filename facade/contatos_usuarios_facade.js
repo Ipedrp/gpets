@@ -5,15 +5,15 @@ class ContatoUsuarioFacede {
     }
     
     async findAll() {
-        return await contatoUsuarioAplication.findAll();
+        return await this.contatoUsuarioAplication.findAll();
     }
 
     async findById(id) {
-        return await contatoUsuarioAplication.findById(id);
+        return await this.contatoUsuarioAplication.findById(id);
     }
 
     async create(contatos_usuarios) {
-        return await contatoUsuarioAplication.create(contatos_usuarios);
+        return await this.contatoUsuarioAplication.create(contatos_usuarios);
     }
 
     async update(id, contato_usuario) {

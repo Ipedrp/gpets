@@ -2,7 +2,7 @@ const express = require('express');
 const enderecoController = require('../controllers/endereco_controller');
 const router = express.Router();
 
-router.get("/", enderecoController.finAll);
+router.get("/", enderecoController.findAll);
 
 router.get("/:id", enderecoController.findById);
 
