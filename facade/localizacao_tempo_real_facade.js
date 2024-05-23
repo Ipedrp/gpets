@@ -4,15 +4,15 @@ class LocalizacaoTempoRealFacede {
       this.localizacaoTempoRealAplication = localizacaoTempoRealApication;
   }
   async findAll() {
-      return await localizacaoTempoRealAplication.findAll();
+      return await this.localizacaoTempoRealAplication.findAll();
   }
 
   async findById(id) {
-      return await localizacaoTempoRealAplication.findById(id);
+      return await this.localizacaoTempoRealAplication.findById(id);
   }
 
   async create(localizacao) {
-      return await localizacaoTempoRealAplication.create(localizacao);
+      return await this.localizacaoTempoRealAplication.create(localizacao);
   }
 
   async update(id, localizacao) {

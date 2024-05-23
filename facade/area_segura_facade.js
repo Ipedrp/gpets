@@ -4,15 +4,15 @@ class AreaSeguraFacede {
         this.areaSeguraAplication = areaSeguraAplication;
     }
     async findAll() {
-        return await areaSeguraAplication.findAll();
+        return await this.areaSeguraAplication.findAll();
     }
 
     async findById(id) {
-        return await areaSeguraAplication.findById(id);
+        return await this.areaSeguraAplication.findById(id);
     }
 
     async create(areas_seguras) {
-        return await areaSeguraAplication.create(areas_seguras);
+        return await this.areaSeguraAplication.create(areas_seguras);
     }
 
     async update(id, areas_seguras) {
