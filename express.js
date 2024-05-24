@@ -8,6 +8,7 @@ const routerContatoUsuario = require('./routes/contato_usuario_router');
 const routerPets = require('./routes/pets_router');
 const routerAreaSegura = require('./routes/area_segura_router');
 const routerContatoPessoaEmergencia = require('./routes/contatos_pessoas_emergencia')
+const routerPessoaEmergencia = require('./routes/contatos_pessoas_emergencia')
 const routerLocalizacaoTempoReal = require('./routes/localizacao_tempo_real')
 
 const app = express();
@@ -26,7 +27,11 @@ app.use('/api/pets', routerPets);
 
 app.use('/api/areaSegura', routerAreaSegura);
 
+
 app.use('/api/contatoPessoasEmergencia', routerContatoPessoaEmergencia);
+
+app.use('/api/pessoaEmergencia', routerPessoaEmergencia);
+
 
 app.use('api/gps', routerLocalizacaoTempoReal);
 
