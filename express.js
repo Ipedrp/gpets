@@ -8,6 +8,8 @@ const routerContatoUsuario = require('./routes/contato_usuario_router');
 const routerPets = require('./routes/pets_router');
 const routerAreaSegura = require('./routes/area_segura_router');
 const routerContatoPessoaEmergencia = require('./routes/contatos_pessoas_emergencia')
+const routerLocalizacaoTempoReal = require('./routes/localizacao_tempo_real')
+
 const app = express();
 const port = 3000;
 
@@ -23,7 +25,11 @@ app.use('/api/contatoUsuario', routerContatoUsuario);
 app.use('/api/pets', routerPets);
 
 app.use('/api/areaSegura', routerAreaSegura);
+
 app.use('/api/contatoPessoasEmergencia', routerContatoPessoaEmergencia);
+
+app.use('api/gps', routerLocalizacaoTempoReal);
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
@@ -40,13 +46,7 @@ app.listen(port, () => {
 // const pessoaEmergenciaAplication = new PessoaEmergenciaRepository(pessoaEmergenciaRepository);
 // const pessoaEmergenciaFacade = new PessoaEmergenciaAplication(pessoaEmergenciaAplication);
 
-// //LOCALIZACAO TEMPO REAL
-// const LocalizacaoTempoRealRepository = require('./repositories/localizacoes_tempo_real_repositories');
-// const LocalizacaoTempoRealAplication = require('./aplication/localizacao_tempo_real_aplication');
-// const LocalizacaoTempoRealFacade = require('./facade/localizacao_tempo_real_facade');
-// const localizacaoTempoRealRepository = new LocalizacaoTempoRealRepository();
-// const localizacaoTempoRealAplication = new LocalizacaoTempoRealRepository(localizacaoTempoRealRepository);
-// const localizacaoTempoRealFacade = new LocalizacaoTempoRealAplication(localizacaoTempoRealAplication);
+
 
 // //Criando rotas para ContatoPessoaEmergencia
 
