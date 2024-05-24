@@ -1,15 +1,16 @@
 const express = require('express');
 const localizacaoTempoReal = require('../controllers/localizacao_tempo_real');
 const router = express.Router();
+const isAuth = require('../middleware/is_auth');
 
-router.get("/", localizacaoTempoReal.findAll);
+router.get("/", isAuth, localizacaoTempoReal.findAll);
 
-router.get("/:id", localizacaoTempoReal.findById);
+router.get("/:id", isAuth, localizacaoTempoReal.findById);
 
-router.post("/", localizacaoTempoReal.create);
+router.post("/", isAuth, localizacaoTempoReal.create);
 
-router.put("/:id", localizacaoTempoReal.update);
+router.put("/:id", isAuth, localizacaoTempoReal.update);
 
-router.delete("/:id", localizacaoTempoReal.delete);
+router.delete("/:id", isAuth, localizacaoTempoReal.delete);
 
 module.exports = router;

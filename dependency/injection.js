@@ -40,7 +40,7 @@ const areaSeguraAplication = new AreaSeguraAplication(areaSeguraRepository);
 const areaSeguraFacade = new AreaSeguraFacade(areaSeguraAplication);
 
 
-// ContatoPessoaEmergencia
+// CONTATO PESSOA EMERGENCIA METHODS
 const ContatoPessoaEmergenciaRepository = require('../repositories/contatos_pessoas_emergencias_repositories');
 const ContatoPessoaEmergenciaAplication = require('../aplication/contato_pessoa_emergencia_aplication');
 const ContatoPessoaEmergenciaFacade = require('../facade/contato_pessoa_emergencia_facade');
@@ -49,7 +49,7 @@ const contatoPessoaEmergenciaAplication = new ContatoPessoaEmergenciaRepository(
 const contatoPessoaEmergenciaFacade = new ContatoPessoaEmergenciaAplication(contatoPessoaEmergenciaAplication);
 
 
-//pessoa_emergencia
+//PESSOA EMERGENCIA METHODS
 const PessoaEmergenciaRepository = require('../repositories/pessoas_emergencias_repositories');
 const PessoaEmergenciaAplication = require('../aplication/pessoas_emergencias_aplication');
 const PessoaEmergenciaFacade = require('../facade/pessoa_emergencias_facade');
@@ -57,8 +57,7 @@ const pessoaEmergenciaRepository = new PessoaEmergenciaRepository();
 const pessoaEmergenciaAplication = new PessoaEmergenciaAplication(pessoaEmergenciaRepository);
 const pessoaEmergenciaFacade = new PessoaEmergenciaFacade(pessoaEmergenciaAplication);
 
-module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade, pessoaEmergenciaFacade};
-// //LOCALIZACAO TEMPO REAL
+// //LOCALIZACAO TEMPO REAL METHODS
 const LocalizacaoTempoRealRepository = require('../repositories/localizacoes_tempo_real_repositories');
 const LocalizacaoTempoRealAplication = require('../aplication/localizacao_tempo_real_aplication');
 const LocalizacaoTempoRealFacade = require('../facade/localizacao_tempo_real_facade');
@@ -66,4 +65,5 @@ const localizacaoTempoRealRepository = new LocalizacaoTempoRealRepository();
 const localizacaoTempoRealAplication = new LocalizacaoTempoRealRepository(localizacaoTempoRealRepository);
 const localizacaoTempoRealFacade = new LocalizacaoTempoRealAplication(localizacaoTempoRealAplication);
 
-module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade, localizacaoTempoRealFacade};
+
+module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade, pessoaEmergenciaFacade, localizacaoTempoRealFacade};
