@@ -48,6 +48,16 @@ const contatoPessoaEmergenciaRepository = new ContatoPessoaEmergenciaRepository(
 const contatoPessoaEmergenciaAplication = new ContatoPessoaEmergenciaRepository(contatoPessoaEmergenciaRepository);
 const contatoPessoaEmergenciaFacade = new ContatoPessoaEmergenciaAplication(contatoPessoaEmergenciaAplication);
 
+
+//pessoa_emergencia
+const PessoaEmergenciaRepository = require('../repositories/pessoas_emergencias_repositories');
+const PessoaEmergenciaAplication = require('../aplication/pessoas_emergencias_aplication');
+const PessoaEmergenciaFacade = require('../facade/pessoa_emergencias_facade');
+const pessoaEmergenciaRepository = new PessoaEmergenciaRepository();
+const pessoaEmergenciaAplication = new PessoaEmergenciaAplication(pessoaEmergenciaRepository);
+const pessoaEmergenciaFacade = new PessoaEmergenciaFacade(pessoaEmergenciaAplication);
+
+module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade, pessoaEmergenciaFacade};
 // //LOCALIZACAO TEMPO REAL
 const LocalizacaoTempoRealRepository = require('../repositories/localizacoes_tempo_real_repositories');
 const LocalizacaoTempoRealAplication = require('../aplication/localizacao_tempo_real_aplication');
