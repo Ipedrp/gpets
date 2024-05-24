@@ -48,4 +48,13 @@ const contatoPessoaEmergenciaRepository = new ContatoPessoaEmergenciaRepository(
 const contatoPessoaEmergenciaAplication = new ContatoPessoaEmergenciaRepository(contatoPessoaEmergenciaRepository);
 const contatoPessoaEmergenciaFacade = new ContatoPessoaEmergenciaAplication(contatoPessoaEmergenciaAplication);
 
-module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade};
+
+//pessoa_emergencia
+const PessoaEmergenciaRepository = require('../repositories/pessoas_emergencias_repositories');
+const PessoaEmergenciaAplication = require('../aplication/pessoas_emergencias_aplication');
+const PessoaEmergenciaFacade = require('../facade/pessoa_emergencias_facade');
+const pessoaEmergenciaRepository = new PessoaEmergenciaRepository();
+const pessoaEmergenciaAplication = new PessoaEmergenciaAplication(pessoaEmergenciaRepository);
+const pessoaEmergenciaFacade = new PessoaEmergenciaFacade(pessoaEmergenciaAplication);
+
+module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade, pessoaEmergenciaFacade};
