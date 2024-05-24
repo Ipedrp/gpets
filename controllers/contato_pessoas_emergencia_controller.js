@@ -4,6 +4,7 @@ module.exports.findAll = async(req, res)=>{
   let contatos = await contatoPessoaEmergenciaFacade.findAll();
   res.json(contatos);
 }
+
 module.exports.findById = async(req, res)=>{
   let id = req.params.id;
   let contato = await contatoPessoaEmergenciaFacade.findById(id);
@@ -31,10 +32,3 @@ module.exports.delete = async(req, res) => {
 
 }
 
-
-}
-module.exports.delete = async(req, res) => {
-  let id = req.params.id;
-  await contatoPessoaEmergenciaFacade.delete(id);
-  res.status(200).json({status: "Contato deletado!"})
-}

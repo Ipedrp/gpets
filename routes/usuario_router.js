@@ -1,15 +1,18 @@
 const express = require('express');
 const usuarioController = require('../controllers/usuario_controller');
 const router = express.Router();
+const isAuth = require('../middleware/is_auth');
 
-router.get("/", usuarioController.findAll);
+// router.use(isAuth); --> a nivel de roteador
 
-router.get("/:id", usuarioController.findById);
+router.get("/", isAuth, usuarioController.findAll);
 
-router.post("/", usuarioController.create);
+router.get("/:id", isAuth, usuarioController.findById);
 
-router.put("/:id", usuarioController.update);
+router.post("/", isAuth, usuarioController.create);
 
-router.delete("/:id", usuarioController.delete);
+router.put("/:id", isAuth, usuarioController.update);
+
+router.delete("/:id", isAuth,usuarioController.delete);
    
 module.exports = router;
