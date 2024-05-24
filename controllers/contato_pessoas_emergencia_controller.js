@@ -21,4 +21,13 @@ module.exports.update = async(req, res)=>{
   let contatoBody = req.body;
   let contato = await contatoPessoaEmergenciaFacade.update(id, contatoBody);
   res.json(contato);
+
 }
+
+module.exports.delete = async(req, res) => {
+  let id = req.params.id;
+  await contatoPessoaEmergenciaFacade.delete(id);
+  res.status(200).json({status: "Contato de Pessoa emergencia deletado!"});
+
+}
+
