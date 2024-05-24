@@ -48,4 +48,12 @@ const contatoPessoaEmergenciaRepository = new ContatoPessoaEmergenciaRepository(
 const contatoPessoaEmergenciaAplication = new ContatoPessoaEmergenciaRepository(contatoPessoaEmergenciaRepository);
 const contatoPessoaEmergenciaFacade = new ContatoPessoaEmergenciaAplication(contatoPessoaEmergenciaAplication);
 
-module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade};
+// //LOCALIZACAO TEMPO REAL
+const LocalizacaoTempoRealRepository = require('../repositories/localizacoes_tempo_real_repositories');
+const LocalizacaoTempoRealAplication = require('../aplication/localizacao_tempo_real_aplication');
+const LocalizacaoTempoRealFacade = require('../facade/localizacao_tempo_real_facade');
+const localizacaoTempoRealRepository = new LocalizacaoTempoRealRepository();
+const localizacaoTempoRealAplication = new LocalizacaoTempoRealRepository(localizacaoTempoRealRepository);
+const localizacaoTempoRealFacade = new LocalizacaoTempoRealAplication(localizacaoTempoRealAplication);
+
+module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade, localizacaoTempoRealFacade};
