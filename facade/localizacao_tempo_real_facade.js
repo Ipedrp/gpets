@@ -1,4 +1,4 @@
-class LocalizacaoTempoRealFacede {
+class LocalizacaoTempoRealFacade {
 
   constructor(localizacaoTempoRealApication){
       this.localizacaoTempoRealAplication = localizacaoTempoRealApication;
@@ -26,4 +26,4 @@ class LocalizacaoTempoRealFacede {
   }
 }
 
-module.exports = LocalizacaoTempoRealFacede;
+module.exports = LocalizacaoTempoRealFacade;

@@ -1,4 +1,4 @@
-class EnderecoFacede {
+class EnderecoFacade {
   
   constructor(enderecoAplication) {
     this.enderecoAplication = enderecoAplication;
@@ -28,4 +28,4 @@ class EnderecoFacede {
   }
 }
 
-module.exports = EnderecoFacede;
+module.exports = EnderecoFacade;

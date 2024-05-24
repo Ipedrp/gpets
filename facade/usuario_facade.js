@@ -1,4 +1,4 @@
-class UsuarioFacede {
+class UsuarioFacade {
 
     constructor(usuarioAplication){
         this.usuarioAplication = usuarioAplication;
@@ -26,4 +26,4 @@ class UsuarioFacede {
     }
 }
 
-module.exports = UsuarioFacede;
+module.exports = UsuarioFacade;
