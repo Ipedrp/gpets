@@ -1,4 +1,4 @@
-class Petsfacede {
+class Petsfacade {
 
     constructor(petsAplication){
         this.petsAplication = petsAplication;
@@ -26,4 +26,4 @@ class Petsfacede {
     }
 }
 
-module.exports = Petsfacede;
+module.exports = Petsfacade;

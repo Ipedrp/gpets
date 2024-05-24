@@ -1,4 +1,4 @@
-class AreaSeguraFacede {
+class AreaSeguraFacade {
 
     constructor(areaSeguraAplication){
         this.areaSeguraAplication = areaSeguraAplication;
@@ -26,4 +26,4 @@ class AreaSeguraFacede {
     }
 }
 
-module.exports = AreaSeguraFacede;
+module.exports = AreaSeguraFacade;

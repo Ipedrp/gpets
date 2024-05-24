@@ -28,16 +28,24 @@ const PetsAplication = require('../aplication/pets_aplication');
 const PetsFacade = require('../facade/pets_facade');
 const petsRepository = new PetsRepository();
 const petsAplication = new PetsAplication(petsRepository);
-const petsFacede = new PetsFacade(petsAplication);
+const petsFacade = new PetsFacade(petsAplication);
 
 
 //AREA SEGURA METHODS 
 const AreaSeguraRepository = require('../repositories/areas_seguras_repositories');
 const AreaSeguraAplication = require('../aplication/areas_seguras_aplication');
-const AreaSeguraFacede = require('../facade/area_segura_facade');
+const AreaSeguraFacade = require('../facade/area_segura_facade');
 const areaSeguraRepository = new AreaSeguraRepository();
 const areaSeguraAplication = new AreaSeguraAplication(areaSeguraRepository);
-const areaSeguraFacade = new AreaSeguraFacede(areaSeguraAplication);
+const areaSeguraFacade = new AreaSeguraFacade(areaSeguraAplication);
 
 
-module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacede, areaSeguraFacade};
+// ContatoPessoaEmergencia
+const ContatoPessoaEmergenciaRepository = require('../repositories/contatos_pessoas_emergencias_repositories');
+const ContatoPessoaEmergenciaAplication = require('../aplication/contato_pessoa_emergencia_aplication');
+const ContatoPessoaEmergenciaFacade = require('../facade/contato_pessoa_emergencia_facade');
+const contatoPessoaEmergenciaRepository = new ContatoPessoaEmergenciaRepository();
+const contatoPessoaEmergenciaAplication = new ContatoPessoaEmergenciaRepository(contatoPessoaEmergenciaRepository);
+const contatoPessoaEmergenciaFacade = new ContatoPessoaEmergenciaAplication(contatoPessoaEmergenciaAplication);
+
+module.exports = {usuarioFacade, enderecoFacade, contatoUsuarioFacade, petsFacade, areaSeguraFacade, contatoPessoaEmergenciaFacade};

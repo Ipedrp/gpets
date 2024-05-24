@@ -1,4 +1,4 @@
-class ContatoPessoaEmergenciaFacede {
+class ContatoPessoaEmergenciaFacade {
 
     constructor(contatoPessoaEmergenciaAplication){
         this.contatoPessoaEmergenciaAplication = contatoPessoaEmergenciaAplication;
@@ -26,4 +26,4 @@ class ContatoPessoaEmergenciaFacede {
     }
 }
 
-module.exports = ContatoPessoaEmergenciaFacede;
+module.exports = ContatoPessoaEmergenciaFacade;
