@@ -1,6 +1,5 @@
 const express = require('express')
 
-
 const routerUsuario = require('./routes/usuario_router');
 const routerEndereco = require('./routes/endereco_router');
 const routerContatoUsuario = require('./routes/contato_usuario_router');
