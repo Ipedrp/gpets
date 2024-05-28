@@ -1,0 +1,18 @@
+INSERT INTO `gpets`.`usuarios` (`id_usuario`, `nome`, `email`, `senha`) VALUES ('1', 'pedro', 'pedropaulo727mqs@gmail.com', '123');
+INSERT INTO `gpets`.`enderecos` (`id_endereco`, `uf`, `municipio`, `bairro`, `rua`, `logradouro`, `numero`, `cep`, `complemento`, `fk_usuario`) VALUES ('1', 'ba', 'tucano', 'tracupa', 'de cima', 'praça', '85', '48790-000', 'casa', '1');
+INSERT INTO `gpets`.`contatos_usuarios` (`id_contato_usuario`, `tipo`, `descricao`, `fk_usuario`) VALUES ('1', 'celular', '7599247-7349', '1');
+INSERT INTO `gpets`.`pessoas_emergencias` (`id_pessoa_emergencia`, `nome`, `fk_usuario`) VALUES ('1', 'Katrina', '1');
+INSERT INTO `gpets`.`contatos_pessoas_emergencias` (`id_contato_pessoa_emergencia`, `tipo`, `descricao`, `fk_pessoa_emergencia`) VALUES ('1', 'intagram', '@katrinabraba', '1');
+INSERT INTO `gpets`.`pets` (`id_pet`, `nome`, `especie`, `raca`, `idade`, `peso`, `fk_usuario`) VALUES ('1', 'max', 'braba', 'braba', '25', '50.3', '1');
+INSERT INTO `gpets`.`areas_seguras` (`id_area_segura`, `quadrante1_eixo_x`, `quadrante1_eixo_y`, `quadrante2_eixo_x`, `quadrante2_eixo_y`, `quadrante3_eixo_x`, `quadrante3_eixo_y`, `quadrante4_eixo_x`, `quadrante4_eixo_y`, `data`, `horario`, `fk_pet`) VALUES ('1', '10', '20', '30', '40', '50', '60', '70', '80', '2024-05-21', '00:00:00', '1');
+INSERT INTO `gpets`.`localizacoes_tempo_real` (`id_localizacao_tempo_real`, `latitude`, `longitude`, `data`, `fk_pet`) VALUES ('1', '300', '500', '2024-04-28', '1');
+
+
+select * from usuarios;
+select * from enderrecos;
+select * from contatos_usuarios;
+select * from pessoas_emergencias;
+select * from contatos_pessoas_emergencias;
+select * from pets;
+select * from areas_seguras;
+select * from localizacoes_tempo_real;
