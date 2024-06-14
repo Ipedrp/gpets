@@ -9,29 +9,30 @@ const routerContatoPessoaEmergencia = require('./routes/contatos_pessoas_emergen
 const routerPessoaEmergencia = require('./routes/contatos_pessoas_emergencia');
 const routerLocalizacaoTempoReal = require('./routes/localizacao_tempo_real');
 const routerAuth = require("./routes/auth_router");
+const isAuth = require('./middleware/is_auth');
+
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 
-// app.use("/api/auth", routerAuth); -- Seria o correto colocar antes de todas as rotas ? 
 
 app.use('/api/usuario', routerUsuario);
 
-app.use('/api/endereco', routerEndereco);
+app.use('/api/endereco',routerEndereco);
 
-app.use('/api/contatoUsuario', routerContatoUsuario);
+app.use('/api/contatoUsuario', isAuth,routerContatoUsuario);
 
-app.use('/api/pets', routerPets);
+app.use('/api/pets',isAuth, routerPets);
 
 app.use('/api/areaSegura', routerAreaSegura);
 
-app.use('/api/contatoPessoasEmergencia', routerContatoPessoaEmergencia);
+app.use('/api/contatoPessoasEmergencia', isAuth, routerContatoPessoaEmergencia);
 
-app.use('/api/pessoaEmergencia', routerPessoaEmergencia);
+app.use('/api/pessoaEmergencia', isAuth, routerPessoaEmergencia);
 
-app.use('/api/localizacaoTempoReal', routerLocalizacaoTempoReal);
+app.use('/api/localizacaoTempoReal',  routerLocalizacaoTempoReal);
 
 app.use("/api/auth", routerAuth);
 

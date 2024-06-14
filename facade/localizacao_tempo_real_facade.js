@@ -24,6 +24,9 @@ class LocalizacaoTempoRealFacade {
 
       await this.localizacaoTempoRealAplication.delete(id);
   }
+  async findLast(id){
+    return await this.localizacaoTempoRealAplication.findLast(id);
+  }
 }
 
 module.exports = LocalizacaoTempoRealFacade;

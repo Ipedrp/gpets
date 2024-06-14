@@ -7,7 +7,7 @@ router.get("/", isAuth, localizacaoTempoReal.findAll);
 
 router.get("/:id", isAuth, localizacaoTempoReal.findById);
 
-router.post("/", isAuth, localizacaoTempoReal.create);
+router.post("/", isAuth,localizacaoTempoReal.create);
 
 router.put("/:id", isAuth, localizacaoTempoReal.update);
 

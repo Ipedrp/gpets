@@ -28,6 +28,20 @@ class LocalizacaoTempoRealRepository {
         await localizacao.destroy();
         return localizacao;
     }
+    async findLast(id){
+      const ultimoElemento = await Localizacoes_tempo_real.findOne({
+          raw: true,
+          where:{
+              fk_pet: id
+          },
+
+        order: [
+          ['id_localizacao_tempo_real','DESC']  // Ordenar pela coluna de criação em ordem decrescente
+        ]
+      });
+
+      return ultimoElemento;
+    }
 }
 
 module.exports =  LocalizacaoTempoRealRepository;

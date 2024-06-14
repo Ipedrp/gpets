@@ -1,5 +1,5 @@
 const { localizacaoTempoRealFacade} = require('../dependency/injection');
-
+const {areaSeguraFacade} = require('../dependency/injection')
 module.exports.findAll = async (req, res) => {
     let localizacaoTempoReal = await localizacaoTempoRealFacade.findAll();
     res.json(localizacaoTempoReal);
@@ -13,8 +13,9 @@ module.exports.findById = async (req, res) => {
 
 module.exports.create = async (req, res) => {
    let localizacaoTempoReal = req.body;
+   let area_segura = await areaSeguraFacade.buscaLocalizacao(localizacaoTempoReal.fk_pet);
    await localizacaoTempoRealFacade.create(localizacaoTempoReal);
-   res.json(localizacaoTempoReal);
+   res.json(area_segura);
 }
 
 module.exports.update = async (req, res) => {
@@ -29,3 +30,4 @@ module.exports.delete = async (req, res) => {
    await localizacaoTempoRealFacade.delete(id);
    res.status(200).json({status: "Localização de tempo real deletada!"})
 }
+

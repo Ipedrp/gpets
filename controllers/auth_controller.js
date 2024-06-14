@@ -34,7 +34,6 @@ exports.login = (req, res, next) => {
       }
 
       usuarioCarregado = usuario;
-
       return bcrypt.compare(senha, usuario.senha);
     })
     .then((senhaDescriptografada) => {
@@ -44,7 +43,8 @@ exports.login = (req, res, next) => {
 
       const token = jwt.sign(
         {
-          email: usuarioCarregado.email
+          email: usuarioCarregado.email,
+          id: usuarioCarregado.id
         },
         "minha_chave_secreta",
         { expiresIn: "1h" }

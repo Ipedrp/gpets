@@ -23,12 +23,27 @@ class AreaSeguraRepository {
     }
 
     async delete(id) {
-        const areaSegura = await this.findById(id);
+        const areaSegura = await Areas_seguras.findById(id);
         if (!areaSegura) {
             throw new Error('Área segura não encontrada');
         }
         await areaSegura.destroy();
         return areaSegura;
+    }
+    async findByIdPet(id) {
+        try {
+            let areasSeguras = await Areas_seguras.findAll({
+                raw: true,
+                where: {
+                    fk_pet: id
+                }
+            });
+            return areasSeguras;
+        } catch (error) {
+            
+            console.error('Erro ao buscar áreas seguras:', error);
+            throw error; 
+        }
     }
 }
 

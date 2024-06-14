@@ -1,6 +1,6 @@
 class AreaSeguraFacade {
 
-    constructor(areaSeguraAplication){
+    constructor(areaSeguraAplication) {
         this.areaSeguraAplication = areaSeguraAplication;
     }
     async findAll() {
@@ -16,13 +16,21 @@ class AreaSeguraFacade {
     }
 
     async update(id, areas_seguras) {
-        await this.areaSeguraAplication.update(id,areas_seguras);
+        await this.areaSeguraAplication.update(id, areas_seguras);
 
     }
 
     async delete(id) {
         await this.areaSeguraAplication.delete(id);
 
+    }
+    async findByIdPet(id) {
+        await this.areaSeguraAplication.findByIdPet(id);
+    }
+
+    async buscaLocalizacao(id) {
+        return await this.areaSeguraAplication.buscaLocalizacao(id);
+      
     }
 }
 

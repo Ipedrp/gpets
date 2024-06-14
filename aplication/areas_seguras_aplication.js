@@ -1,7 +1,10 @@
+const LocalizacaoFactory = require('../factories/localizacao_tempo_real_factory');
+
 class AreaSeguraAplication {
 
-    constructor(areaSeguraRepository){
+    constructor(areaSeguraRepository, localizacaoTempoRealRepository){
         this.areaSeguraRepository = areaSeguraRepository;
+        this.localizacaoTempoRealRepository = localizacaoTempoRealRepository;
     }
 
     async findAll() {
@@ -22,6 +25,12 @@ class AreaSeguraAplication {
 
     async delete(id) {
         await this.areaSeguraRepository.delete(id);
+    }
+    async buscaLocalizacao(id){
+        let areaSegura = await this.areaSeguraRepository.findByIdPet(id);
+        let localizaoTempoReal = await this.localizacaoTempoRealRepository.findLast(id);
+        let localizacao = new LocalizacaoFactory(areaSegura, localizaoTempoReal).novaLocalizacao();
+        return localizacao.getQuadrante();   
     }
 }
 
