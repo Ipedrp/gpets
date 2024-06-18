@@ -2,6 +2,8 @@ class LocalizacaoTempoReal {
 
     constructor(localizacaoTempoRealRepository) {
         this.localizacaoTempoRealRepository = localizacaoTempoRealRepository;
+        
+     
     }
 
     async findAll() {
@@ -26,7 +28,7 @@ class LocalizacaoTempoReal {
     }
     async findLast(id) {
         return await this.localizacaoTempoRealRepository.findLast(id);
-
     }
+
 }
 module.exports = LocalizacaoTempoReal;

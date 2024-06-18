@@ -42,6 +42,7 @@ class LocalizacaoTempoRealRepository {
 
       return ultimoElemento;
     }
+
 }
 
 module.exports =  LocalizacaoTempoRealRepository;

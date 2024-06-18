@@ -1,5 +1,5 @@
 const { localizacaoTempoRealFacade} = require('../dependency/injection');
-const {areaSeguraFacade} = require('../dependency/injection')
+const {areaSeguraFacade, email} = require('../dependency/injection')
 module.exports.findAll = async (req, res) => {
     let localizacaoTempoReal = await localizacaoTempoRealFacade.findAll();
     res.json(localizacaoTempoReal);
@@ -29,5 +29,10 @@ module.exports.delete = async (req, res) => {
    let id = req.params.id;
    await localizacaoTempoRealFacade.delete(id);
    res.status(200).json({status: "Localização de tempo real deletada!"})
+}
+module.exports.findRealTime = async(req, res)=>{
+   let id = req.params.id
+   let localizacao = await localizacaoTempoRealFacade.findLast(id);
+   res.status(201).json({link: `https://www.google.com.br/maps/@${localizacao.latitude},${localizacao.longitude},15z?entry=ttu`})
 }
 

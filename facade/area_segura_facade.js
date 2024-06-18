@@ -30,7 +30,9 @@ class AreaSeguraFacade {
 
     async buscaLocalizacao(id) {
         return await this.areaSeguraAplication.buscaLocalizacao(id);
-      
+    }
+    async enviarMail(id){
+        await this.areaSeguraAplication.enviarMail(id);
     }
 }
 

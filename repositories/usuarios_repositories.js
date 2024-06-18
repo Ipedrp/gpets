@@ -6,7 +6,11 @@ class UsuarioRepository {
     }
 
     async findById(id) {
-        return await Usuarios.findByPk(id);
+        
+        return await Usuarios.findByPk(id, {raw: true,
+
+        });
+            
     }
 
     async create(usuarios) {
@@ -29,5 +33,4 @@ class UsuarioRepository {
         return usuario;
     }
 }
-
 module.exports = UsuarioRepository;

@@ -41,4 +41,9 @@ module.exports.buscaLocalizacao = async(req, res)=>{
     let areas_seguras = await areaSeguraFacade.buscaLocalizacao(id);
     res.json({"Status: ":areas_seguras});
 }
+module.exports.enviarMail = async(req, res, next ) => {
+    let id = Number(req.params.id);
+    await areaSeguraFacade.enviarMail(id);
+    res.status(200).json({status: "Email enviado!"})
+}
 

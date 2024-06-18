@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
             fk_usuario:{
                 type: DataTypes.INTEGER,
                 allowNull: true,
-
             }
 
         },

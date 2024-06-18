@@ -61,8 +61,10 @@ const AreaSeguraRepository = require('../repositories/areas_seguras_repositories
 const AreaSeguraAplication = require('../aplication/areas_seguras_aplication');
 const AreaSeguraFacade = require('../facade/area_segura_facade');
 const areaSeguraRepository = new AreaSeguraRepository();
-const areaSeguraAplication = new AreaSeguraAplication(areaSeguraRepository, localizacaoTempoRealRepository);
+const areaSeguraAplication = new AreaSeguraAplication(areaSeguraRepository, localizacaoTempoRealRepository, usuarioRepository, petsRepository);
 const areaSeguraFacade = new AreaSeguraFacade(areaSeguraAplication);
+
+const email = require('../aplication/emails_send');
 
 module.exports = {
   usuarioFacade,
@@ -73,4 +75,5 @@ module.exports = {
   contatoPessoaEmergenciaFacade,
   pessoaEmergenciaFacade,
   localizacaoTempoRealFacade,
+  email,
 };

@@ -6,7 +6,9 @@ class PetRepository {
     }
 
     async findById(id) {
-        return await Pets.findByPk(id);
+        return await Pets.findByPk(id,{
+            raw: true,
+        });
     }
 
     async create(pet) {

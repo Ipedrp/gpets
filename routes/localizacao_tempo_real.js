@@ -7,10 +7,12 @@ router.get("/", isAuth, localizacaoTempoReal.findAll);
 
 router.get("/:id", isAuth, localizacaoTempoReal.findById);
 
-router.post("/", isAuth,localizacaoTempoReal.create);
+router.post("/",localizacaoTempoReal.create);
 
 router.put("/:id", isAuth, localizacaoTempoReal.update);
 
 router.delete("/:id", isAuth, localizacaoTempoReal.delete);
+
+router.get("/:id/tempoReal", localizacaoTempoReal.findRealTime);
 
 module.exports = router;

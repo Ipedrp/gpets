@@ -13,6 +13,8 @@ router.put("/:id",  areaSeguraController.update);
 
 router.delete("/:id", areaSeguraController.delete);
 
-router.get("/localizacao/:id", isAuth,areaSeguraController.buscaLocalizacao);
+router.get("/localizacao/:id",areaSeguraController.buscaLocalizacao);
+
+router.post("/enviarEmail/:id", areaSeguraController.enviarMail)
    
 module.exports = router;
