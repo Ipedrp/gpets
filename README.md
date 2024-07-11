@@ -1,7 +1,3 @@
-Aqui está o README atualizado com o nome do projeto GpetS:
-
----
-
 # 🐾 GpetS
 
 ## Introdução
